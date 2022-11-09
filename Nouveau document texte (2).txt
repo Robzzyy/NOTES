@@ -1,0 +1,103 @@
+
+ne pas remplir .env sinon base de donnée visible par tt le monde sur github
+faire plutot 
+env.locale
+
+cree une base de donne = symfony console doctrine:database:create
+
+avant make entity faire make user
+
+
+nom de classe = toujours maj premiere lettre
+
+controleur = controle le modele et l'envoie à la vue
+
+FORM = IMPORTANT
+
+
+(l'utilisateur doit pouvoir modifier suprimer ect son compte)
+
+symfony console make:crud
+
+crud methode deja existant dans symfony
+
+
+-d si le server est lancer
+
+-symfony new "teste"
+
+login github
+controle h (remplacer)
+
+cd /c/xampp/htdocs
+symfony new bibliosf --webapp --version="5.4"
+cd bibliosf			// pour changer de dossier
+code . 				// pour ouvrir VS Code dans le dossier
+composer require encore  // intaller le composant Webpack Encore
+yarn install			// ajoute le dossier node_js
+
+//Dans le fichier webpack.config.js
+//si on utilise un framework css comme bootstrap, développé en SASS
+//décommenter la ligne 59
+	.enableSassLoader()
+    
+//si on utilise jquery, on décommente la ligne 72
+	.autoProvidejQuery()
+
+
+//Modifier le fichier app.js
+    import './styles/app.scss';
+
+    // start the Stimulus application
+    // import './bootstrap';
+
+    const $ = require("jquery");
+    global.$ = global.jQuery = $;
+    require("bootstrap");
+
+// Renommer le fichier styles/app.css en styles/app.scss
+// et modifier le fichier
+    @import "~@fortawesome/fontawesome-free/css/all.min.css";
+    @import "~bootstrap/scss/bootstrap";
+
+    body {
+        background-color: lightgray;
+    }
+
+// installer les dépendandes nécessaires avec yarn
+yarn add node-sass sass-loader jquery popper.js bootstrap@4.6 @fortawesome/fontawesome-free
+
+// compiler les fichiers js et css avec yarn
+yarn encore dev
+
+
+// Démarrer le serveur
+symfony server:start -d
+ 
+// Créer la bdd
+// Dans le fichier .env.local modifier la variable DATABASE_URL
+  
+symfony console doctrine:database:create
+ 
+// Créer l'entité User
+symfony console make:user
+ 
+// Pour ajouter des champs à l'entité User ou créer des nouvelles entités
+symfony console make:entity
+
+// Après avoir créer ou modifier une entité
+symfony console make:migration
+symfony console doctrine:migration:migrate
+
+// modifier le fichier config/packages/twig.yaml pour ajouter le style bootstrap pour les formulaires
+	twig:
+    	form_themes: [ "bootstrap_4_layout.html.twig "]
+
+// Connexion - Inscription
+symfony console make:auth
+symfony console make:registration-form
+
+// Créer un CRUD pour chaque entité
+symfony console make:cru
+ 
+ 

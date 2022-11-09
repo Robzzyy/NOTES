@@ -1,0 +1,32 @@
+pixlr (retouche image)
+ 	
+controle shift v = texte en brut (sans soulignement gras ect)
+
+godot : pour aller vers le bas il faut rajouter du positif et vers le haut du negatif.
+
+lospec.com (faire du pixel art)
+
+on peux changer le personnage part exemple dans l'instance de la scene lv1 part exemple
+sans changer son aspect dans SA scene.
+
+
+TileMap = "tuile" , ce noeud sert à gerer les murs sol ect
+
+atlas = serie de tile afficher comme une seule
+
+selection (raccourci m), shift + clique permet de faire une ligne , maj controle clique pr faire une grande surface
+
+godot va rendre les choses dans l'ordre de "l'arbre" les chose plus bas sont rendu en dernier.
+
+3 types de structure de donnée :
+-tableau
+-énumération
+-dictionnaire
+
+
+controle clique sur une fonction godot donne la doc
+
+alt + fleche pour deplacer une ligne de code
+
+controle + r changer le nom d'une variable
+controle + k pr mettre un bloc en commentaire

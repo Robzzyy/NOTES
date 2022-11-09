@@ -1,0 +1,29 @@
+NOTE PERSO :
+MANY to MANY = table de jointure et faire many to one dessus
+
+symfony , pr telecharger une image dans le form:
+
+methode new et edit produitController 
+
+produitType champ photo 
+
+création d'un dossier img dans public
+
+ajouter dans service yamls : parameters:
+    image_directory: '%kernel.project_dir%/public/images/'
+
+aller dans le twig index et dans le tableau : 
+<td>
+                    <img src="{{ image_path ~ produit.photo }}" alt="image manquante" class="miniature">
+                </td>
+dans le dossier config->packages->twig.yaml
+
+    globals:
+        image_path: "/images/"
+
+
+
+
+-la methode render qui vient d'une classr de symfony , est utiliser dans securityController
+et on prend en 	1er parametre la route "security/login.html.twig" , et en deuxieme un
+tableau associatif avec un indice et une valeur ['last_username'] => $lastUsername

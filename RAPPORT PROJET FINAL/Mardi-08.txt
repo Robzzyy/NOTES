@@ -1,0 +1,32 @@
+MARDI 08/11
+
+1) config du fichier .env , document notre gestrionnaire de BBD.
+
+2) faire symfony console doctrine:database:create et ensuite symfony console make:migration
+
+3) création de notre entiter User , Produit , Commande , Detail (symfony console make:entity)
+
+4) mettre les clé dans les entitier (manyToOne ect ect)
+
+5) Faire make crud de produit , commande , user
+
+
+
+
+
+
+
+
+
+--
+  ManyToOne    Each Commande relates to (has) one User.                         
+               Each User can relate to (can have) many Commande objects         
+                                                                                
+  OneToMany    Each Commande can relate to (can have) many User objects.        
+               Each User relates to (has) one Commande                          
+                                                                                
+  ManyToMany   Each Commande can relate to (can have) many User objects.        
+               Each User can also relate to (can also have) many Commande objects
+                                                                                
+  OneToOne     Each Commande relates to (has) exactly one User.                 
+               Each User also relates to (has) exactly one Commande.    

@@ -1,0 +1,16 @@
+cd /c/xampp/htdocs
+
+git clone https://github.com/Gerard-Menfin/courssf5.git projetsf5
+
+cd projetsf5
+
+modifier le fichier .env (DATABASE_URL)
+composer install
+symfony console doctrine:database:create ( ou ddc)
+symfony console doctrine:migrations:migrate
+
+Si la bdd existe déjà 
+	supprimer tous les fichiers du dossier migrations
+    vider la table doctrine_migration_versions (dans la bdd)
+    symfony console make:migration
+    symfony console doctrine:migrations:migrate

@@ -1,0 +1,27 @@
+-yarn encore-dev
+
+-twig sert a gerer la partie front de symfony
+
+-CRUD
+
+-Symfony ne jamais toucher a la bdd a la main , toujours via la console
+
+- Tjrs commencer part un schema pour la bdd ( les liens entre les tables)
+
+-Clé primaire ex (table client : id 11) si il est reliée à une autre table il passe de clé 
+primaire à étrangere ex (table commande : client_id : 11)
+
+-src le dossier prend le controleur ect ect
+
+-template le dossier prend le twig
+
+-entité = transformation des données en objet 
+-dans les class ils ya propriété et methode
+
+-il y'a 4 type de function dans les classe : static , private , finale , public
+
+-cardinalité = 1,0,N (0 = rien) (1 = minimum 1 ) (n = plusieurs)
+
+-fajre make user et recuper leur methode pour le mettre dans client
+
+-make:registration-form
